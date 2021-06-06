@@ -2,6 +2,18 @@
     <head>
         <title></title>
     </head>
+    <style>
+        .parentdiv {
+            width: 60%;
+            height: 80vh;
+            background-color: antiquewhite;
+        }
+        .childdiv {
+            width: 30%;
+            height: 40vh;
+            background-color:blueviolet;
+        }
+    </style>
     <body>
         <script>
             //How to concert 2 dimensional array into one dimensional array
@@ -31,6 +43,22 @@
                                         //and their is second depth. If their will be
                                         //a large number of nested arrays than infinity 
                                         //word can be used instead of numbers.
+        </script>
+        <br>
+        <div onclick="parentdiv()" class="parentdiv">
+            <div onclick="childdiv()" class="childdiv">
+                
+            </div>
+        </div>
+        <script>
+            function parentdiv() {
+                alert('parentdiv is clicked')
+            }
+            function childdiv() {
+                alert('childdiv is clicked')
+                event.stopPropagation(); //This function will stop calling parent div
+                                            //after child div
+            }
         </script>
     </body>
 </html>
