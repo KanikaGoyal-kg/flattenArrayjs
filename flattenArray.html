@@ -45,6 +45,7 @@
                                         //word can be used instead of numbers.
         </script>
         <br>
+        <!-- Bubble phase event propagation -->
         <div onclick="parentdiv()" class="parentdiv">
             <div onclick="childdiv()" class="childdiv">
                 
@@ -59,6 +60,31 @@
                 event.stopPropagation(); //This function will stop calling parent div
                                             //after child div
             }
+        </script>
+        <hr>
+        <!-- Event capturing event propagation -->
+        <div class="parentdiv" id="parentid">
+            <div class="childdiv" id="childid">
+                
+            </div>
+        </div>
+        <script>
+
+            const parentid = document.getElementById('parentid');
+            const childid = document.getElementById('childid');
+
+            
+            function parentcall() {
+                alert('parentdiv is clicked')
+            }
+            function childcall() {
+                alert('childdiv is clicked')
+                event.stopPropagation(); //This function will stop calling parent div
+                                            //after child div
+            }
+
+            parentid.addEventListener('click', parentcall, true);
+            childid.addEventListener('click', childcall, true);
         </script>
     </body>
 </html>
