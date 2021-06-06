@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            //How to concert 2 dimensional array into one dimensional array
+            const arr = [
+                ['zone_1', 'zone_2'],
+                ['zone_3', 'zone_4'],
+                ['zone_5', 'zone_6'],
+                ['zone_7', 'zone_8'],
+            ];
+            const flatarr = arr.reduce((accum, cur) => {
+                return accum.concat(cur);
+            });
+            console.log(flatarr);
+            console.log(flatarr[0])
+        </script>
+        <br>
+        <script>
+            
+        </script>
+    </body>
+</html>
