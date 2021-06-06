@@ -19,7 +19,18 @@
         </script>
         <br>
         <script>
-            
+            //Flat function
+            const zoneArray = [
+                ['zone_1', 'zone_2'],
+                ['zone_3', 'zone_4'],
+                ['zone_5', 'zone_6'],
+                ['zone_7', 'zone_8', ['zone_9, zone_10'], ['zone_11, zone_12',['zone_13, zone_14']]],
+            ];
+            console.log(zoneArray.flat(3)) //2 is written for the depth as there is
+                                        //already one array which is counted as one depth
+                                        //and their is second depth. If their will be
+                                        //a large number of nested arrays than infinity 
+                                        //word can be used instead of numbers.
         </script>
     </body>
 </html>
